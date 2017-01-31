@@ -1,0 +1,33 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "$8999",
+      "description": "This is an immaculate 2006 Nissan Rogue."
+    },
+    {
+      "make": "Pontiac",
+      "model": "G5",
+      "year": "2009",
+      "price": "$3000",
+      "description": "This is a car"
+    },
+    {
+      "make": "BMW",
+      "model": "Z3",
+      "year": "2015",
+      "price": "30000",
+      "description": "This is a BMW"
+    },
+    {
+      "make": "Dodge",
+      "model": "Charger",
+      "year": "2008",
+      "price": "$25000",
+      "description": "This is a Dodge Charger"
+    }
+  ]
+}
+

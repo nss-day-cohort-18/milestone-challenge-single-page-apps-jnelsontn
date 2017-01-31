@@ -1,0 +1,12 @@
+.addspace {
+	margin-bottom: 40px;
+}
+
+.carborderclass {
+	border: 2px solid black;
+}
+
+.dotted {
+	border: 4px dotted red;
+	background: yellow;
+}
