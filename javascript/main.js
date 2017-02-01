@@ -47,7 +47,7 @@ var CarLot = (function (original) {
             cardContainer[i].addEventListener("click", borderControl);
 
           function borderControl () {
-              if (!event.currentTarget.classList.contains("addborder")) {  
+              if (! event.currentTarget.classList.contains("addborder")) {  
                   for ( var j = 0; j < cardContainer.length; j++ ) 
                     cardContainer[j].classList.remove("addborder"); /* this genius move is from Jeremy */
                     this.classList.add("addborder"); 
@@ -79,63 +79,6 @@ return original;
 
 /* We got childNode15 from console.log(getDefaultContainer[j].childNodes); */
 
-
-
-                      /* 
-                       *   Lets call some event handlers. Here we get all classes with "col-md-4" which
-                       *   is a bootstrap column. Then we add an event listener to each that will
-                       *   toggle the class "dotted" when clicked. 
-                       */
-            /*         var getDefaultContainer = document.getElementsByClassName("col-md-4");
-                      for (var i = 0; i < getDefaultContainer.length; i++) {
-                          getDefaultContainer[i].addEventListener("click", addBorder);
-                      }
-
-
-                     function addBorder () {
-                          this.classList.toggle("addborder"); 
-                          grabInput.value = '';
-                          grabInput.focus(); 
-                      } */
-
-
-                    /*
-                     * Let's grab the "input" element and add an event listener that looks 
-                     * for key input. Nothing will fire UNLESS the input contains the "dotted" class
-                     * meaning that it has been clicked on. 
-                     *
-                     * Perhaps this could be cleaned up somehow?
-                     */
-         /*          var grabInput = document.getElementById("editdescription");
-                   grabInput.addEventListener("keyup", editText);
-
-                    function editText () {    
-                      for (var j = 0; j < getDefaultContainer.length; j++) {
-                          if (getDefaultContainer[j].classList.contains("addborder")) {
-                              getDefaultContainer[j].childNodes[15].innerHTML = grabInput.value;
-                          }
-                      }
-                    } */
-
-                    // end of editText function
-
-
-
-          // Add an event listener to each card. Add a border on click
-           /* }
-            } */
- /*         for ( var i = 0 ; i < cardContainer.length; i++ ) {
-              cardContainer[i].addEventListener("click", function (event) {
-                  if (!event.currentTarget.classList.contains("addborder")) {
-                    for (var j = 0; j < cardContainer.length; j++)
-                        cardContainer[j].classList.remove("addborder");
-                
-              this.classList.add("addborder");
-              } else {
-              this.classList.remove("addborder");
-              }
-            });
-          } */
 
 
 /*
