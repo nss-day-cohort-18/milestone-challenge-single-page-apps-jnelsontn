@@ -7,6 +7,6 @@
 }
 
 .dotted {
-	border: 4px dotted red;
-	background: yellow;
+	border: 2px dotted blue;
+	background: lightblue;
 }
