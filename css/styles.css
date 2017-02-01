@@ -2,11 +2,11 @@
 	margin-bottom: 40px;
 }
 
-.carborderclass {
-	border: 2px solid black;
+.firstborder {
+	border: 1px solid black;
 }
 
-.dotted {
+.addborder {
 	border: 2px dotted blue;
 	background: lightblue;
 }
