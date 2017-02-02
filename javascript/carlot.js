@@ -50,4 +50,5 @@ var CarLot = (function (original) {
     }; // end return
 
 	return original;
+  
 })(CarLot || {});

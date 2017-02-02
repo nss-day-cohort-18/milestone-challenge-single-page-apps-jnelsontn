@@ -15,7 +15,7 @@ var CarLot = (function (original) {
               Use a counter variable to know when to close a row after three columns.
               */
               /* let us grab bootstrap's row class which our columns are placed in */
-              var mainDiv = document.querySelector(".row"); 
+              let mainDiv = document.querySelector(".row"); 
               for (car in carInventory) {
                       var listOfCars = "";
                       var eachCar = carInventory[car];
@@ -35,9 +35,9 @@ var CarLot = (function (original) {
                               `
                       mainDiv.innerHTML += listOfCars;
             }
-      }
+      },
 
-      original.activateEvents = function (inventory) {
+      original.activateEvents = function () {
 
           let cardContainer = document.getElementsByClassName("col-md-4");
           let inputText = document.getElementById("editdescription");
@@ -47,13 +47,18 @@ var CarLot = (function (original) {
             cardContainer[i].addEventListener("click", borderControl);
 
           function borderControl () {
-              if (! event.currentTarget.classList.contains("addborder")) {  
+              if (!this.classList.contains("addborder")) { /* if THIS doesn't contain the class... run this */
+                  console.log(this.id);
                   for ( var j = 0; j < cardContainer.length; j++ ) 
                     cardContainer[j].classList.remove("addborder"); /* this genius move is from Jeremy */
-                    this.classList.add("addborder"); 
+                    // this.classList.add("addborder"); 
+                    original.changeBorder(this, "addborder");
+                    inputText.focus();
+                    inputText.value = '';
               } else {
-                    this.classList.remove("addborder");
-              } 
+                    original.resetBorder(this, "addborder");
+                    // this.classList.remove("addborder");
+              }
           }
 
           function editText () {
@@ -65,10 +70,6 @@ var CarLot = (function (original) {
 
       }   /* end of activateEvents */
 
-// Now that the DOM is loaded, establish all the event listeners needed
-// here
-
-
 // Load the inventory and send a callback function to be invoked after the process is complete
 CarLot.loadInventory();
 
@@ -78,14 +79,5 @@ return original;
 
 
 /* We got childNode15 from console.log(getDefaultContainer[j].childNodes); */
-
-
-
-/*
-          function addBorder (something) {
-              this.classList.toggle("addborder"); 
-              inputText.value = '';
-              inputText.focus();
-          } */
 
 
